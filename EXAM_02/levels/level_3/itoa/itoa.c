@@ -40,7 +40,7 @@ char    *itoa(int nbr)
     n = nbr;
     size = 0;
     //size = count_digits(nbr);
-    if(nbr == -2147483648) //dealing with INT_MIN at the beginning so there is no need to creat a long variable (but it would work as well doing so)
+    if(nbr == -2147483648) //dealing with INT_MIN at the beginning so there is no need to create a long variable (but it would work as well doing so)
         return("-2147483648\0");
     if(nbr <= 0)
         size++;
