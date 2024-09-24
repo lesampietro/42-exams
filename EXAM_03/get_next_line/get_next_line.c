@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include <fcntl.h> //manipulate the fd
 #include <unistd.h> //read function
@@ -41,7 +40,6 @@ char *get_next_line(int fd)
         {
             buffer_read = read(fd, buffer, BUFFER_SIZE);
             buffer_pos = 0;
-            printf("%i\n", buffer_read); 
             if(buffer_read <= 0) //if no bytes were read (in case there i nothing else to be read from the fd), break the loop
                 break ;
         }
@@ -55,19 +53,3 @@ char *get_next_line(int fd)
     return (ft_strdup(line)); // returns the line to be printed
 }
 
-
-/*int main(void)
-{
-    /*char    *src = "Hello, hello";
-    char    *res;
-    int i = 0;
-
-    i = printf("%s\n", src);
-    printf("byte count src: %i\n", i);
-    res = ft_strdup(src);
-    i = printf("%s\n", res);
-    printf("byte count res: %i\n", i);
-    */
-    
-    return (0);
-}*/
